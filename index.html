@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inspiration for Dreamers - Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: linear-gradient(to right, rgb(9, 120, 9) 33.33%, white 33.33%, white 66.66%, rgb(155, 12, 12) 66.66%);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 50px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #9b0c0c;
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url('images/honedaca.jpg');
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+      color: black;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 30px;
+      max-width: 600px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .hero a {
+      background-color: #1f80e0;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 16px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #145da0;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.8);
+      text-align: center;
+      padding: 20px;
+      color: white;
+    }
+
+    footer a {
+      color: #9b0c0c;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .video-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    .video-overlay iframe {
+      width: 80%;
+      height: 45%;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .skip-button {
+      margin-top: 20px;
+      background-color: #1f80e0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .skip-button:hover {
+      background-color: #145da0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Video Overlay -->
+  <div class="video-overlay" id="videoOverlay">
+    <iframe 
+      id="videoFrame"
+      src="https://www.youtube.com/embed/mqzBfZ7oSZA?autoplay=1&controls=0&showinfo=0" 
+      allow="autoplay; encrypted-media" 
+      allowfullscreen>
+    </iframe>
+    <button class="skip-button" id="skipButton">Skip</button>
+  </div>
+
+  <nav>
+    <div class="logo">Dreamer Web</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li> <!-- Added Login -->
+    </ul>
+  </nav>
+
+  <section class="hero">
+    <h1>Keep Dreaming, Keep Fighting</h1>
+    <p>United as one, we inspire DACA dreamers to fight for a brighter tomorrow.</p>
+    <a href="service.html">Explore Services</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dreamer Web. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a></p>
+  </footer>
+
+  <script>
+    const videoOverlay = document.getElementById('videoOverlay');
+    const skipButton = document.getElementById('skipButton');
+    const videoFrame = document.getElementById('videoFrame');
+
+    // Hide overlay when the "Skip" button is clicked and stop the video
+    skipButton.addEventListener('click', () => {
+      videoOverlay.style.display = 'none';
+      videoFrame.src = ''; // Stops the video
+    });
+
+    // Hide overlay after 15 seconds and stop the video
+    setTimeout(() => {
+      videoOverlay.style.display = 'none';
+      videoFrame.src = ''; // Stops the video
+    }, 15000); // 15000ms = 15 seconds
+  </script>
+</body>
+</html>

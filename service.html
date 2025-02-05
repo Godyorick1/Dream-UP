@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inspiration for Dreamers - Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, rgb(9, 120, 9) 33.33%, white 33.33%, white 66.66%, rgb(155, 12, 12) 66.66%);
+      margin: 0;
+      color: #000;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 20px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #9b0c0c;
+    }
+
+    .gallery {
+      padding: 30px;
+      text-align: center;
+    }
+
+    .gallery h2 {
+      font-size: 28px;
+      color: #1f80e0;
+      margin-bottom: 20px;
+    }
+
+    .gallery-item {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+      max-width: 300px;
+
+      opacity: 0;
+      transform: translateY(50px);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+    }
+
+    .gallery-item.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gallery img {
+      width: 90%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      margin-bottom: 10px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.1) rotate(3deg);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    }
+
+    .gallery-item h3 {
+      font-size: 18px;
+      color: #000;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .steps {
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
+      font-size: 18px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: white;
+    }
+
+    footer a:hover {
+      color: #9b0c0c;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+    }
+
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+
+  <section class="gallery">
+    <h2>Our Services</h2>
+    <div class="gallery-item">
+      <img src="images/emotional support.jpg" alt="Emotional Support" title="Supportive resources to help navigate emotional challenges.">
+      <h3>Emotional Support</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Dedication and achivemnet.jpg" alt="Achievement" title="Celebrating milestones and recognizing your success.">
+      <h3>Achievement</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Forms Aid.jpg" alt="DACA Legal Aid" title="Guidance and resources for navigating DACA forms and legal processes.">
+      <h3>Legal Aid for DACA</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/Fincnacial aid.jpg" alt="Financial Help" title="Access to financial assistance and trusted resources.">
+      <h3>Financial Assistance</h3>
+    </div>
+    <div class="gallery-item">
+      <img src="images/icons.jpg" alt="Community Forums" title="A supportive platform to connect and collaborate with others.">
+      <h3>Community Forums</h3>
+    </div>
+  </section>
+
+  <section class="steps">
+    <h2>How to Access Our Services</h2>
+    <ol>
+      <li>Visit our "Services" page to explore available support options.</li>
+      <li>Identify the service you need and contact us through the "Contact" page.</li>
+      <li>Join our forums to connect with others and share experiences.</li>
+      <li>Participate in programs or workshops for personal growth and success.</li>
+      <li>Stay updated with resources and guidance to achieve your dreams.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dreamer Web. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+      <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.jpg" alt="Facebook"></a>
+      <a href="https://discord.com" target="_blank"><img src="images/Discord.png" alt="Discord"></a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const items = document.querySelectorAll('.gallery-item');
+
+      function reveal() {
+        const windowHeight = window.innerHeight;
+        items.forEach(item => {
+          const top = item.getBoundingClientRect().top;
+          if (top < windowHeight - 100) {
+            item.classList.add('visible');
+          }
+        });
+      }
+
+      reveal(); // Reveal on load
+      window.addEventListener('scroll', reveal); // Reveal on scroll
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Inspiration for Dreamers - Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script 
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJ+Y3N6QwXX7n3Zs4IqLZ1nARosf5CF3sG0ns="
+    crossorigin="anonymous">
+  </script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: white;
+      margin: 0;
+      color: black;
+    }
+    nav {
+      background-color: rgba(0, 0, 0, 0.9);
+      padding: 15px 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+    nav ul li {
+      margin: 0 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #9b0c0c;
+    }
+
+    .contact {
+      padding: 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 28px;
+      color: #1f80e0;
+      margin-bottom: 20px;
+    }
+    .quote-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .quote-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+    .quote {
+      font-style: italic;
+      font-size: 18px;
+      color: #333;
+      max-width: 600px;
+    }
+
+    iframe {
+      width: 300px;
+      height: 300px;
+      border: 0;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      text-align: left;
+    }
+    form label {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    form button {
+      background-color: #1f80e0;
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    form button:hover {
+      background-color: #145da0;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.9);
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    footer a {
+      color: #9b0c0c;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 15px;
+    }
+    .social-icons a {
+      margin: 0 10px;
+      display: inline-block;
+      text-decoration: none;
+    }
+    .social-icons img {
+      width: 32px;
+      height: 32px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="service.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="login.html">Login</a></li> <!-- Added Login -->
+    </ul>
+  </nav>
+
+  <section class="contact">
+    <h2>Contact Us</h2>
+    <div class="quote-container">
+      <img src="images/Stop.jpg" alt="Inspiration Image">
+      <p class="quote">
+        "At Inspiration for Dreamers, we are building bridges of hope, 
+        empowering communities, and shaping brighter futures for all."
+      </p>
+    </div>
+
+    <iframe 
+      id="mapIframe"
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.785601162019!2d-118.17388988478545!3d34.03600898061121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2cb1e6fb272d7%3A0x97eb60a2d79ab117!2sEast%20Los%20Angeles%20College!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+      allowfullscreen=""
+      loading="lazy">
+    </iframe>
+
+    <form id="contactForm">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your name" required>
+
+      <label for="email">Your Email</label>
+      <input id="email" type="email" placeholder="Enter your email" required>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" placeholder="Write your message here" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Dreamer Web. All rights reserved.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="images/instagram.png" alt="Instagram">
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="images/facebook.jpg" alt="Facebook">
+      </a>
+      <a href="https://discord.com" target="_blank">
+        <img src="images/Discord.png" alt="Discord">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+  $(document).ready(function() {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          const lat = position.coords.latitude;
+          const lng = position.coords.longitude;
+          const dynamicSrc = `https://www.google.com/maps?q=${lat},${lng}&z=14&output=embed`;
+          $("#mapIframe").attr("src", dynamicSrc);
+        },
+        function(error) {
+          console.warn("Geolocation denied or an error occurred. Fallback map stays.");
+        }
+      );
+    } else {
+      console.warn("Geolocation isn't supported by this browser. Keeping fallback map.");
+    }
+
+    $("#contactForm").on("submit", function(e) {
+      e.preventDefault();
+
+      const name = $("#name").val();
+      const email = $("#email").val();
+      const message = $("#message").val();
+
+      const subject = encodeURIComponent("Contact Form Inquiry");
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Message: " + message
+      );
+
+      const myEmail = "godovni@gmail.com";
+
+      const mailtoLink = `mailto:${myEmail}?subject=${subject}&body=${body}`;
+      window.location.href = mailtoLink;
+    });
+  });
+  </script>
+</body>
+</html>
